@@ -1,18 +1,17 @@
-EXE=test
-SOURCES=$(EXE).c
-OBJECTS=$(SOURCES: .c=.o)
+EXE=name.exe
+OBJECTS=sourcefile.o
 
 CC=gcc
 CFLAGS=-c -ansi -pedantic -Wall
 LDFLAGS=
 
-all: $(SOURCES) $(EXE)
+all: $(OBJECTS) link
 
 clean:
-	rm *.o test
+	rm *.o $(EXE)
 
-$(EXE): $(OBJECTS)
-	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+link:
+	$(CC) $(LDFLAGS) -o $(EXE) $(OBJECTS)
 
 .c.o: 
 	$(CC) $(CFLAGS) $< -o $@
