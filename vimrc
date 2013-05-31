@@ -11,6 +11,8 @@ map <Leader>m <esc>:tabnext<CR>
 
 vnoremap <Leader>s :sort<CR>
 
+cmap w!! w !sudo tee %
+
 set list listchars=tab:\ \ ,trail:·
 
 set autoread
