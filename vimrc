@@ -11,8 +11,20 @@ map <Leader>m <esc>:tabnext<CR>
 
 vnoremap <Leader>s :sort<CR>
 
+set list listchars=tab:\ \ ,trail:·
+
+set autoread
+set gcr=a:blinkon0
+set visualbell
+set noswapfile
 set number
 set nowrap
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 "set fo-=t
 
 ""?
@@ -23,15 +35,3 @@ set nowrap
 "set shiftwidth=4
 "set expandtab
 "set shiftround
-
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-"extra whitespace - before colorscheme command
-"autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-"au InsertLeave * match ExtraWhitespace /\s\+$/
-
-"set t_Co=256
-"color wombat256mod
