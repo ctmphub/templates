@@ -1,6 +1,9 @@
 syntax on
 set clipboard=unnamed
 
+set backupdir=C:\\vimtmp,.
+set directory=C:\\vimtmp,.
+
 vnoremap < <gv
 vnoremap > >gv
 
@@ -11,6 +14,9 @@ map <Leader>m <esc>:tabnext<CR>
 
 vnoremap <Leader>s :sort<CR>
 
+nmap <Leader>x :%!xxd<CR>
+nmap <Leader>r :%!xxd -r<CR>
+
 cmap w!! w !sudo tee %
 
 set list listchars=tab:\ \ ,trail:·
@@ -18,7 +24,7 @@ set list listchars=tab:\ \ ,trail:·
 set autoread
 set gcr=a:blinkon0
 set visualbell
-set noswapfile
+"set noswapfile
 set number
 set nowrap
 
@@ -32,8 +38,8 @@ nnoremap <C-l> <C-w>l
 ""?
 "set smartindent
 ""spaces instead of tabs
-"set tabstop=4
-"set softtabstop=4
-"set shiftwidth=4
-"set expandtab
-"set shiftround
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set shiftround
