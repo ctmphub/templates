@@ -1,5 +1,7 @@
 syntax on
-set clipboard=unnamed
+"set clipboard=unnamed
+
+autocmd Filetype python set omnifunc=python3complete#Complete
 
 set backupdir=C:\\vimtmp,.
 set directory=C:\\vimtmp,.
@@ -13,11 +15,12 @@ map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 
 vnoremap <Leader>s :sort<CR>
+inoremap <Leader><Leader>c <C-x><C-o>
 
-nmap <Leader>x :%!xxd<CR>
-nmap <Leader>r :%!xxd -r<CR>
+"nmap <Leader>x :%!xxd<CR>
+"nmap <Leader>r :%!xxd -r<CR>
 
-cmap w!! w !sudo tee %
+"cmap w!! w !sudo tee %
 
 set list listchars=tab:\ \ ,trail:·
 
@@ -43,3 +46,10 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set shiftround
+
+"extra whitespace - before colorscheme command
+"autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+"au InsertLeave * match ExtraWhitespace /\s\+$/
+
+"set t_Co=256
+"color wombat256mod
